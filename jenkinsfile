@@ -24,7 +24,7 @@ pipeline{
            stage('to run the playbook'){
           
                  steps{        
-                           sh "ansible-playbook play.yml" 
+                           sh "mkdir india" 
                            }
                            }
           
