@@ -14,7 +14,7 @@ pipeline{
                        
                steps{ 
                     sshagent(['docker-key']) {
-                            sh "docker ps"
+                            sh "ls /root"
                            }
                     }
                     
