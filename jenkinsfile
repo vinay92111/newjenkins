@@ -1,0 +1,38 @@
+pipeline{
+       agent any
+       stages {
+       
+            stage('Compile'){
+                  steps{ 
+                    
+                                echo "Compiled successfully"
+                                 
+                                 
+                           }
+                           
+                  }
+                  
+                  
+         stage('Unit'){
+            
+               steps{
+                                echo"tested Successfully
+                                
+                                }
+                                
+                                
+                                }
+                                
+                            }
+                            
+                            
+                            }
+                            
+                            
+                            
+                  
+                  
+                          
+                  
+                         
+          
