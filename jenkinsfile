@@ -23,7 +23,7 @@ pipeline{
                            }
            stage('to run the playbook'){
           
-                 steps{        
+                 steps{    sh "pwd"    
                            sh "ansible-playbook play.yml" 
                            }
                            }
