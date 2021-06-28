@@ -26,14 +26,18 @@ pipeline{
                     
                     
                     
-          stage('to run ansible pipeline'){
+          stage('to change the folder'){
           
                  steps{        
-                           sh "ansible-playbook play.yml"
+                           sh "cd /ans"
                            
                            }
                            
                            }
+           stage('to run the playbook'){
+          
+                 steps{        
+                           sh "ansible-playbook play.yml"               
           
                     }                   
         }
