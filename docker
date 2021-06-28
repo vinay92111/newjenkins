@@ -6,6 +6,11 @@ pipeline{
                   steps{ 
                     echo "Compiled successfully"
                                }        
-                  }     
+                  }
+            stage('to deploy container'){
+                  steps{ 
+                    sh "docker container run -itd ubuntu:latest"
+                    }
+                    }
           }
           }
