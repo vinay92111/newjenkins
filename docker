@@ -8,8 +8,8 @@ pipeline{
                                }        
                   }
             stage('to deploy container'){
-                 docker      
-                  steps{ 
+                       
+               steps{ 
                     sh "docker container run -itd ubuntu:latest"
                     }
                     }
