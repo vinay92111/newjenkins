@@ -24,7 +24,11 @@ pipeline{
            stage('to run the playbook'){
           
                  steps{    
-                         sh "ansible-playbook  play.yml --key-file '/root/.ssh/id_rsa'"    
+                            ansiblePlaybook (
+				credentialsId: 'ansible-private', 
+				disableHostKeyChecking: true, 
+				playbook: 'play.yml',
+					)
                            
                            }
                            }
