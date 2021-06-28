@@ -18,6 +18,7 @@ pipeline{
                steps{
                                 sh"cat /etc/os-release"
                                 
+                                
                                 }
                                 
                                 
@@ -28,7 +29,8 @@ pipeline{
           stage('to run ansible pipeline'){
           
                  steps{        
-                           sh "ansible-playbook play.yml"
+                           sh "cd /
+                               ansible-playbook play.yml"
                            
                            }
                            
