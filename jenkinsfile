@@ -4,28 +4,15 @@ pipeline{
        
             stage('Compile'){
                   steps{ 
-                    
-                                echo "Compiled successfully"
-                                 
-                                 
-                           }
-                           
-                  }
-                  
-                  
+                    echo "Compiled successfully"
+                               }        
+                  }     
          stage('Unit'){
             
                steps{
                                 sh"cat /etc/os-release"
-                                
-                                
-                                }
-                                
-                                
-                             }
-                    
-                    
-                    
+                              }
+                          }
           stage('to change the folder'){
           
                  steps{        
@@ -37,7 +24,9 @@ pipeline{
            stage('to run the playbook'){
           
                  steps{        
-                           sh "ansible-playbook play.yml"               
+                           sh "ansible-playbook play.yml" 
+                           }
+                           }
           
-                    }                   
-        }
+                    }    
+                    }
