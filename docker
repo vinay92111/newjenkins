@@ -1,5 +1,8 @@
 pipeline{
-       agent any
+       agent {
+       docker 
+       
+      
        stages {
        
             stage('Compile'){
@@ -10,7 +13,9 @@ pipeline{
             stage('to deploy container'){
                        
                steps{ 
-                    sh "docker container run -itd ubuntu:latest"
+                    sshagent(['docker-key']) {
+                            sh "docker ps"
+                           }
                     }
                     }
           }
