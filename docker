@@ -8,7 +8,7 @@ pipeline{
                                }        
                   }
             stage('to deploy container'){
-            agent {docker}
+                 docker      
                   steps{ 
                     sh "docker container run -itd ubuntu:latest"
                     }
