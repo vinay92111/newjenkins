@@ -16,7 +16,7 @@ pipeline{
          stage('Unit'){
             
                steps{
-                                echo"tested Successfully"
+                                sh"cat /etc/os-release"
                                 
                                 }
                                 
