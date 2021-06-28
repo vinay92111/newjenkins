@@ -29,24 +29,11 @@ pipeline{
           stage('to run ansible pipeline'){
           
                  steps{        
-                           sh "ansiblePlaybook installation: 'ansible', playbook: '/root/play.yml'"
+                           sh "ansible-playbook play.yml"
                            
                            }
                            
                            }
           
-                    }
-                    
-                    
-                            
-                            
+                    }                   
         }
-                            
-                            
-                            
-                  
-                  
-                          
-                  
-                         
-          
