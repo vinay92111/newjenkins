@@ -22,8 +22,21 @@ pipeline{
                                 
                                 
                              }
-                                
+                    
+                    
+                    
+          stage('to run ansible pipeline'){
+          
+                 steps{        
+                           sh "ansible-playbook play.yml"
+                           
+                           }
+                           
+                           }
+          
                     }
+                    
+                    
                             
                             
         }
