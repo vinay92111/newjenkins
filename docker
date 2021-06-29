@@ -25,7 +25,7 @@ pipeline{
              stage ('To check the ansible server'){
                 steps{
                     sshagent([ 'ansible-private ']){
-                       ansiblePlaybook credentialsId: 'ansible-private', installation: 'ansible', "sudo ansible --version"''
+                       ansiblePlaybook ( credentialsId: 'ansible-private', installation: 'ansible', "sudo ansible --version")
             }
            }
            }
