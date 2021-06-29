@@ -27,7 +27,7 @@ pipeline{
                     sshagent(['ansible-private']){
                        script {
                        sh 'ssh -o "StrictHostKeyChecking no" root@172.31.13.74 "sudo ansible --version"'
-                       sh ' ifconfig'
+                       sh ' ssh -o "StrictHostKeyChecking no" root@172.31.13.74 "sudo ifconfig"'
                        }
             }
            }
