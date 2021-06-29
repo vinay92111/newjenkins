@@ -27,7 +27,7 @@ pipeline{
                     sshagent(['ansible-private']){
                        script {
                        sh 'ssh -o "StrictHostKeyChecking no" root@172.31.13.74 "sudo ansible --version"'
-                       sh ' ssh -o "StrictHostKeyChecking no" root@172.31.13.74 "sudo ansible-playbook /root/play/play.yml"'
+                       sh ' ssh -o "StrictHostKeyChecking no" root@172.31.13.74 "sudo ansible-playbook /play/play.yml"'
                        }
             }
            }
