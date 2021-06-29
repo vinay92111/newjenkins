@@ -24,8 +24,10 @@ pipeline{
              
              stage ('To check the ansible server'){
                 steps{
-                    sshagent([ 'ansible-private ']){
-                       sh " ifconfig"
+                    sshagent(['ansible-private']){
+                       script {
+                       sh 'ssh -o "StrictHostKeyChecking no" root@172.31.13.74 "sudo ansible --version"'
+                       }
             }
            }
            }
