@@ -1,1 +1,25 @@
-echo " Hello World"
+pipeline{
+       agent any
+       
+       
+      
+       stages {
+       
+            stage('Compile'){
+                  steps{ 
+                    echo "Compiled successfully"
+                               }        
+                  }
+            stage('to deploy container'){
+                       
+               steps{ 
+                    sshagent(['docker-key']) {
+                           script {
+                             sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker --version"'
+                              }
+                           }
+                    }
+                    
+          }
+          }
+          }
