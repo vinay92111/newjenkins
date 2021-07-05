@@ -36,8 +36,8 @@ pipeline{
       always {
         
         emailext (
-            to: 'mannvinay92111@gmail.com',
-            from: 'mannvinay9199@gmail.com',
+            to: 'mannvinay9199@gmail.com',
+            from: 'mannvinay92111@gmail.com',
             subject: "Test mail",
             body: "Test mail from jenkins"
            
