@@ -15,9 +15,20 @@ pipeline{
                steps{ 
                     sshagent(['docker-key']) {
                            script {
+                             
+                             //Checking the docker version
+                             
                              sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker --version"'
-                          //Building the image                  
+                             
+                          //Building the custom image
+                          
                              sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker image build -t dock:1 ."'
+                             
+                          //creating the container from custom image
+                          
+                          
+                          sh 'ssh -o "StrictHostKeyChecking no" docker container run -itd -p 8002:80 dock:1"'
+                          
                                }
                            }
                     }
