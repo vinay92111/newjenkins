@@ -27,7 +27,7 @@ pipeline{
                           //creating the container from custom image
                           
                           
-                          sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker container run -itd -p 8003:80 dock:1"'
+                          sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker container run -itd -p 8004:80 dock:1"'
                           
                                }
                            }
@@ -37,7 +37,7 @@ pipeline{
         
         emailext (
             to: 'mannvinay92111@gmail.com',
-            from: 'mannvinay92111@gmail.com',
+            from: 'mannvinay9199@gmail.com',
             subject: "Test mail",
             body: "Test mail from jenkins"
            
