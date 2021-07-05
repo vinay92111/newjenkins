@@ -27,7 +27,7 @@ pipeline{
                           //creating the container from custom image
                           
                           
-                          sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker container run -itd -p 8005:80 dock:1"'
+                          sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker container run -itd -p 8003:80 dock:1"'
                           
                                }
                            }
