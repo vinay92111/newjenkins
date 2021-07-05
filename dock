@@ -39,6 +39,7 @@ pipeline{
             to: 'mannvinay92111@gmail.com',
             from: 'mannvinay92111@gmail.com',
             subject: "Test mail"
+            body: "Test mail from jenkins"
            
           )
                   }
