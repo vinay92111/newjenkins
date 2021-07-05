@@ -17,6 +17,7 @@ pipeline{
                            script {
                              sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker --version"'
                              sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo mkdir /abc"'
+                             sh 'ssh -o "StrictHostKeyChecking no" root@172.31.17.34 "sudo docker image build -t dock:1 ."'
                                }
                            }
                     }
